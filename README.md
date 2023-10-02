@@ -24,6 +24,11 @@ Inside the terminal we type the command
 ```bash
 pip install -r requirements.txt
 ```
+As well is necessary to install the spanish package for spacy.
+
+```bash
+python -m spacy download es_core_news_sm
+```
 
 Once the requirements are installed we can launch our application by running the `run.py` file
 
