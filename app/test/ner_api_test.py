@@ -21,11 +21,33 @@ class FlaskAppTestCase(unittest.TestCase):
             ]
         }
 
+        # Define the expected response
+        expected_response = {
+            "resultado": [
+                {
+                    "entidades": {
+                        "Apple": "ORG",
+                        "Reino Unido": "LOC"
+                    },
+                    "oración": "Apple está buscando comprar una startup del Reino Unido por mil millones de dólares."
+                },
+                {
+                    "entidades": {
+                        "San Francisco": "LOC"
+                    },
+                    "oración": "San Francisco considera prohibir los robots de entrega en la acera."
+                }
+            ]
+        }
+
         # Send a POST request to the /api/v1/ner endpoint
         response = self.client.post('/api/v1/ner', json=payload)
 
         # Parse the response JSON
         data = response.get_json()
+
+        # Assert the response data
+        self.assertEqual(data, expected_response)
 
         # Assert the response status code
         self.assertEqual(response.status_code, 200)
