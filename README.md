@@ -41,7 +41,11 @@ If for any reason you need to change the port. You need to go to `run.py` file a
 ## Usinge the API
 Once our app is running, its time to use Postman or the tool of your preference to test the API.
 
-The API has only one endpoint that is `/ner` and it only accepts POST requests. The complete URL is `http://127.0.0.1:4000/api/v1/ner`.
+The API has only one endpoint that is `/ner` and it only accepts POST requests. The complete URL is 
+
+```
+http://127.0.0.1:4000/api/v1/ner
+```
 
 The API expects a JSON object with the following structure:
 
