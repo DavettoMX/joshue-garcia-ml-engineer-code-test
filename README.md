@@ -35,7 +35,7 @@ The application will start running in the port `4000`.
 If for any reason you need to change the port. You need to go to `run.py` file and change the port:
 
 ```python
-    app.run(debug=True, host='0.0.0.0', port=desired_port)
+app.run(debug=True, host='0.0.0.0', port=desired_port)
 ```
 
 ## Usinge the API
